@@ -8,13 +8,11 @@ export class Human1 {
     if (this.age < 12){
       let ageForJupiter = "You're not even 1 years old on this planet"
       let expectancyForJupiter = 0;
-      return ageForJupiter;
-      return expectancyForJupiter;
+      return {ageForJupiter, expectancyForJupiter}
     } else if(this.age > expectancyForJupiter){
         let newMessage = this.age - expectancyForJupiter
         let ageForJupiter = Math.round(this.age / 11.86)
-        return newMessage;
-        return ageForJupiter;
+        return {newMessage, ageForJupiter};
     }
   }
   venusAge(){
