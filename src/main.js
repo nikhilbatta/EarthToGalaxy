@@ -1,4 +1,4 @@
-import { Human } from './earth.js';
+import { Human1 } from './earth.js';
 // import $ from 'jquery';
 // import 'bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
