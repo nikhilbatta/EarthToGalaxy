@@ -21,6 +21,12 @@ describe("Human1", function(){
   });
 });
 describe("Human1", function(){
+  it("blah", function(){
+    let person = new Human1(51,80);
+    expect(person.venusAge()).toEqual(({ ageForVenus: 13, yearsUnderExpectancy: 27 }));
+  });
+});
+describe("Human1", function(){
   it("blah2", function(){
     let person = new Human1(8,80);
     expect(person.marsAge()).toEqual(5,68);
