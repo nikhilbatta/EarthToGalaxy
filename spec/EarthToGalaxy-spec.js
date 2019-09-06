@@ -9,9 +9,15 @@ describe("Human1", function(){
   });
 });
 describe("Human1", function(){
+  it("will grab the age and expectancy for planet jupiter", function(){
+    let person = new Human1(12,30);
+    expect(person.jupiterAge()).toEqual(({ ageForJupiter: "You're not even 1 years old on this planet", expectancyForJupiter: 0 }));
+  });
+});
+describe("Human1", function(){
   it("blah", function(){
     let person = new Human1(8,80);
-    expect(person.venusAge()).toEqual( 5,60);
+    expect(person.venusAge()).toEqual(({ ageForVenus: 13, yearsUnderExpectancy: 27 }));
   });
 });
 describe("Human1", function(){

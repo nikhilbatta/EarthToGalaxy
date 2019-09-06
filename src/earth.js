@@ -5,7 +5,7 @@ export class Human1 {
   }
   jupiterAge(){
     const expectancyForJupiter = 25;
-    if (this.age < 12){
+    if (this.age <= 12){
       let ageForJupiter = "You're not even 1 years old on this planet"
       let expectancyForJupiter = 0;
       return {ageForJupiter, expectancyForJupiter}
@@ -21,7 +21,7 @@ export class Human1 {
   }
   venusAge(){
     const expectancyForVenus = 40;
-    if (this.age < 1){
+    if (this.age <= 1){
       let ageForVenus = "You're not even 1 years old on this planet"
       let expectancyForVenus = 0;
       return {ageForVenus, expectancyForVenus};
@@ -29,6 +29,10 @@ export class Human1 {
     let yearsOverExpectancy = this.age - expectancyForVenus;
     let ageForVenus = Math.round(this.age / .62);
     return {yearsOverExpectancy,ageForVenus};
+  } else{
+    let ageForVenus = Math.round(this.age / .62);
+    let yearsUnderExpectancy = expectancyForVenus - ageForVenus  ;
+    return {ageForVenus, yearsUnderExpectancy};
   }
   }
   marsAge(){
