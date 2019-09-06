@@ -26,14 +26,14 @@ export class Human1 {
       let expectancyForVenus = 0;
       return {ageForVenus, expectancyForVenus};
     } else if (this.age > expectancyForVenus){
-    let yearsOverExpectancy = this.age - expectancyForVenus;
-    let ageForVenus = Math.round(this.age / .62);
-    return {yearsOverExpectancy,ageForVenus};
-  } else{
-    let ageForVenus = Math.round(this.age / .62);
-    let yearsUnderExpectancy = expectancyForVenus - ageForVenus;
-    return {ageForVenus, yearsUnderExpectancy};
-  }
+      let yearsOverExpectancy = this.age - expectancyForVenus;
+      let ageForVenus = Math.round(this.age / .62);
+      return {yearsOverExpectancy,ageForVenus};
+    } else{
+      let ageForVenus = Math.round(this.age / .62);
+      let yearsUnderExpectancy = expectancyForVenus - ageForVenus;
+      return {ageForVenus, yearsUnderExpectancy};
+    }
   }
   marsAge(){
     if(this.age < 2){
@@ -41,18 +41,30 @@ export class Human1 {
       let expectancyForMars = 0;
       return {ageForMars,expectancyForMars}
     } else {
-    let ageForMars = Math.round(this.age / 1.88);
-    let expectancyForMars = this.expectancy/2
-    return {ageForMars,expectancyForMars};
+      let ageForMars = Math.round(this.age / 1.88);
+      let expectancyForMars = this.expectancy/2
+      return {ageForMars,expectancyForMars};
+    }
   }
-}
   mercuryAge(){
-    let ageForMercury = Math.round(this.age / .24);
-    let expectancyForMercury = this.expectancy * .2
-    return ageForMercury;
-    return expectancyForMercury;
+    const expectancyForMercury = 10;
+    if(this.age < 1){
+      let ageForMercury = "You're not even 1 years old on this planet"
+      let expectancyForMercury = 0;
+      return {ageForMercury,expectancyForMercury}
+    }
+    else if (this.age > expectancyForMercury){
+      let yearsOverExpectancy = this.age - expectancyForMercury;
+      let ageForMercury = Math.round(this.age / .24)
+      return {yearsOverExpectancy,ageForMercury}
+    } else{
+      let ageForMercury = Math.round(this.age / .24);
+      let yearsUnderExpectancy = expectancyForMercury - ageForMercury;
+      return {ageForMercury,yearsUnderExpectancy};
+    }
   }
 }
 
-var person = new Human1(4,80)
+var person = new Human1(51,80)
 person.marsAge()
+person.mercuryAge()
